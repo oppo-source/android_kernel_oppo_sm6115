@@ -2771,3 +2771,4 @@
   xsk_tx_release
   xsk_uses_need_wakeup
   zap_vma_ptes
+  clk_set_duty_cycle

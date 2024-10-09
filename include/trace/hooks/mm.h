@@ -18,13 +18,12 @@
 
 #include <trace/hooks/vendor_hooks.h>
 #include <linux/rwsem.h>
+#include <../mm/slab.h>
 
 #ifdef __GENKSYMS__
 #include <linux/types.h>
 #include <linux/mm.h>
 #include <linux/oom.h>
-#include <linux/rwsem.h>
-#include <../mm/slab.h>
 #endif
 
 struct oom_control;
@@ -193,6 +192,12 @@ DECLARE_HOOK(android_vh_rmqueue,
 DECLARE_HOOK(android_vh_kmalloc_slab,
 	TP_PROTO(unsigned int index, gfp_t flags, struct kmem_cache **s),
 	TP_ARGS(index, flags, s));
+DECLARE_HOOK(android_vh_compact_finished,
+	TP_PROTO(bool *abort_compact),
+	TP_ARGS(abort_compact));
+DECLARE_HOOK(android_vh_madvise_cold_or_pageout_abort,
+	TP_PROTO(struct vm_area_struct *vma,bool *abort_madvise),
+	TP_ARGS(vma, abort_madvise));
 DECLARE_HOOK(android_vh_madvise_cold_or_pageout,
 	TP_PROTO(struct vm_area_struct *vma, bool *allow_shared),
 	TP_ARGS(vma, allow_shared));
@@ -221,12 +226,6 @@ DECLARE_HOOK(android_vh_slab_page_alloced,
 DECLARE_HOOK(android_vh_kmalloc_order_alloced,
         TP_PROTO(struct page *page, size_t size, gfp_t flags),
         TP_ARGS(page, size, flags));
-DECLARE_HOOK(android_vh_compact_finished,
-	TP_PROTO(bool *abort_compact),
-	TP_ARGS(abort_compact));
-DECLARE_HOOK(android_vh_madvise_cold_or_pageout_abort,
-	TP_PROTO(struct vm_area_struct *vma, bool *abort_madvise),
-	TP_ARGS(vma, abort_madvise));
 DECLARE_HOOK(android_vh_alloc_flags_cma_adjust,
 	TP_PROTO(gfp_t gfp_mask, unsigned int *alloc_flags),
 	TP_ARGS(gfp_mask, alloc_flags));

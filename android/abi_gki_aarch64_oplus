@@ -113,6 +113,8 @@
   free_pages
   free_percpu
   fs_bio_set
+  fsnotify
+  __fsnotify_parent
   fsstack_copy_inode_size
   fsync_bdev
   generic_delete_inode
@@ -311,6 +313,7 @@
   revert_creds
   root_mem_cgroup
   rtc_read_alarm
+  revert_creds
   __rtnl_link_unregister
   sched_clock
   sched_setscheduler_nocheck
@@ -401,6 +404,12 @@
   __traceiter_android_vh_binder_free_proc
   __traceiter_android_vh_binder_has_work_ilocked
   __traceiter_android_vh_binder_looper_state_registered
+  __traceiter_android_vh_binder_special_task
+  __traceiter_android_vh_alloc_oem_binder_struct
+  __traceiter_android_vh_binder_transaction_received
+  __traceiter_android_vh_binder_free_buf
+  __traceiter_android_vh_free_oem_binder_struct
+  __traceiter_android_vh_binder_buffer_release
   __traceiter_android_vh_binder_new_ref
   __traceiter_android_vh_binder_preset
   __traceiter_android_vh_binder_priority_skip
@@ -490,6 +499,7 @@
   __traceiter_android_vh_sched_show_task
   __traceiter_android_vh_sched_stat_runtime_rt
   __traceiter_android_vh_show_mapcount_pages
+  __traceiter_android_vh_shrink_node_memcgs
   __traceiter_android_vh_sync_txn_recvd
   __traceiter_android_vh_task_blocks_on_rtmutex
   __traceiter_android_vh_tune_inactive_ratio
@@ -558,6 +568,12 @@
   __tracepoint_android_vh_compact_finished
   __tracepoint_android_vh_check_page_look_around_ref
   __tracepoint_android_vh_alloc_pages_reclaim_bypass
+  __tracepoint_android_vh_alloc_oem_binder_struct
+  __tracepoint_android_vh_binder_transaction_received
+  __tracepoint_android_vh_free_oem_binder_struct
+  __tracepoint_android_vh_binder_special_task
+  __tracepoint_android_vh_binder_free_buf
+  __tracepoint_android_vh_binder_buffer_release
   __tracepoint_android_vh_free_unref_page_bypass
   __tracepoint_android_vh_kvmalloc_node_use_vmalloc
   __tracepoint_android_vh_should_alloc_pages_retry
@@ -628,6 +644,7 @@
   __tracepoint_android_vh_sched_show_task
   __tracepoint_android_vh_sched_stat_runtime_rt
   __tracepoint_android_vh_show_mapcount_pages
+  __tracepoint_android_vh_shrink_node_memcgs
   __tracepoint_android_vh_sync_txn_recvd
   __tracepoint_android_vh_task_blocks_on_rtmutex
   __tracepoint_android_vh_tune_inactive_ratio
@@ -694,6 +711,7 @@
   wake_up_process
   wake_up_state
   wq_worker_comm
+  mdmreason_set
   is_ashmem_file
   zero_pfn
   is_transparent_hugepage
