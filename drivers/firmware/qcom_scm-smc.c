@@ -22,8 +22,8 @@ static bool hab_calling_convention;
 
 static DEFINE_MUTEX(qcom_scm_lock);
 
-#define QCOM_SCM_EBUSY_WAIT_MS 30
-#define QCOM_SCM_EBUSY_MAX_RETRY 20
+#define QCOM_SCM_EBUSY_WAIT_MS 35
+#define QCOM_SCM_EBUSY_MAX_RETRY 70
 
 #define SCM_SMC_N_REG_ARGS	4
 #define SCM_SMC_FIRST_EXT_IDX	(SCM_SMC_N_REG_ARGS - 1)
