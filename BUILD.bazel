@@ -240,9 +240,6 @@ define_db845c(
         "drivers/power/oplus/pd_ext/pd_dbg_info.ko",
         "drivers/power/oplus/pd_ext/tcpc_class.ko",
         "drivers/power/oplus/v1/oplus_chg.ko",
-        "drivers/power/oplus/v2/oplus_chg_v2.ko",
-        "drivers/power/oplus/v2/ufcs/ufcs_class.ko",
-        "drivers/power/oplus/oplus_chg_symbol.ko",
         "drivers/watchdog/pm8916_wdt.ko",
         "drivers/watchdog/qcom-wdt.ko",
         # TODO(b/233404531): Remove zsmalloc.ko when db845c is a mixed build
